@@ -1,0 +1,44 @@
+{% extends 'backAdmin.html.twig' %}
+
+{% block container %}
+    <h1>Menu</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ menu.id }}</td>
+            </tr>
+            <tr>
+                <th>Boisson</th>
+                <td>{{ menu.boisson }}</td>
+            </tr>
+            <tr>
+                <th>Dessert</th>
+                <td>{{ menu.dessert }}</td>
+            </tr>
+            <tr>
+                <th>Supplement</th>
+                <td>{{ menu.supplement }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ menu.prix }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('menu_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('menu_edit', { 'id': menu.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

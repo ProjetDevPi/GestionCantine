@@ -1,0 +1,10 @@
+cantine_plat:
+    resource: "@CantineBundle/Resources/config/routing/plat.yml"
+    prefix:   /plat
+cantine_menu:
+    resource: "@CantineBundle/Resources/config/routing/menu.yml"
+    prefix:   /menu
+
+cantine_homepage:
+    path:     /back
+    defaults: { _controller: CantineBundle:Default:indexback }

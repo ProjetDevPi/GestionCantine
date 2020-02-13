@@ -1,0 +1,6 @@
+user_homepage:
+    path:     /
+    defaults: { _controller: UserBundle:Default:index }
+user_back:
+    path:     /back
+    defaults: { _controller:UserBundle:Default:indexback }
